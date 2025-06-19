@@ -66,8 +66,7 @@ const Hero: React.FC<HeroProps> = ({ onExploreClick }) => {
         <p 
           ref={subtitleRef}
           className="text-xl md:text-2xl text-gray-600 dark:text-gray-300 max-w-2xl mx-auto mb-10"
-        >
-          Full-Stack Developer & UI/UX Designer creating beautiful and functional web experiences.
+        >Front End Developer & UI/UX Designer creating beautiful and functional web experiences.
         </p>
         <button
           ref={buttonRef}
