@@ -17,28 +17,25 @@ const About: React.FC = () => {
         </div>
 
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
+          
           {/* Bio Section */}
           <div>
             <h3 className="text-2xl font-bold mb-6 text-gray-800 dark:text-white">
               My Journey
             </h3>
+
             <p className="text-gray-600 dark:text-gray-300 mb-6 leading-relaxed">
-              I&#39;m a budding Front-End Developer with a strong passion for
-              building clean, responsive, and interactive web experiences. While
-              I&#39;m still early in my career, I&#39;ve already worked on a
-              variety of projects using modern tools like Next.js, Tailwind CSS,
-              and ShadCN UI. I enjoy turning ideas into polished, user-friendly
-              interfaces and constantly push myself to learn new technologies,
-              refine my skills, and build meaningful digital experiences. This
-              portfolio is a reflection of my journey so far — and it&#39;s just
-              the beginning.
+              I’m a Full-Stack Developer who enjoys building efficient backend systems and polished,
+              intuitive front-end interfaces. Over the course of working with modern technologies like
+              Next.js, Express, Node.js, and relational databases, I’ve become comfortable creating
+              complete end-to-end solutions that are maintainable, scalable, and user-focused.
             </p>
 
             <p className="text-gray-600 dark:text-gray-300 mb-6 leading-relaxed">
-              I specialize in React ecosystem and modern JavaScript, with a
-              focus on building performant and accessible user interfaces.
-              I&#39;m also experienced in backend development with Node.js and
-              database design.
+              My work often revolves around architecting APIs, optimizing data flow, managing
+              authentication systems, and bringing designs to life through responsive, accessible UI
+              components. Whether it’s designing a robust backend or crafting a smooth user
+              experience, I enjoy seeing a project through from concept to deployment.
             </p>
 
             {/* Experience */}
@@ -46,12 +43,10 @@ const About: React.FC = () => {
               <h4 className="text-xl font-semibold mb-4 text-gray-800 dark:text-white">
                 Experience
               </h4>
+
               <div className="space-y-4">
                 {experiences.map((exp, index) => (
-                  <div
-                    key={index}
-                    className="transition-transform hover:translate-x-1"
-                  >
+                  <div key={index} className="transition-transform hover:translate-x-1">
                     <div className="flex items-start">
                       <ChevronRight
                         className="text-blue-500 mt-1 flex-shrink-0"
@@ -79,12 +74,10 @@ const About: React.FC = () => {
               <h4 className="text-xl font-semibold mb-4 text-gray-800 dark:text-white">
                 Education
               </h4>
+
               <div className="space-y-4">
                 {education.map((edu, index) => (
-                  <div
-                    key={index}
-                    className="transition-transform hover:translate-x-1"
-                  >
+                  <div key={index} className="transition-transform hover:translate-x-1">
                     <div className="flex items-start">
                       <ChevronRight
                         className="text-blue-500 mt-1 flex-shrink-0"
@@ -110,32 +103,29 @@ const About: React.FC = () => {
             <h3 className="text-2xl font-bold mb-6 text-gray-800 dark:text-white">
               Skills & Expertise
             </h3>
+
             <div className="grid grid-cols-1 md:grid-cols-2 gap-y-6 gap-x-10">
-              {skills.map((skill) => {
-                // const Icon = require('lucide-react')[skill.icon];
-                return (
-                  <div key={skill.name} className="group">
-                    <div className="flex items-center mb-2">
-                      <div className="p-2 rounded-md bg-blue-100 dark:bg-blue-900/30 text-blue-500 dark:text-blue-400 mr-3 group-hover:bg-blue-500 group-hover:text-white transition-colors">
-                        {/* <Icon size={18} /> */}
-                      </div>
-                      <span className="font-medium text-gray-800 dark:text-gray-200">
-                        {skill.name}
-                      </span>
+              {skills.map((skill) => (
+                <div key={skill.name} className="group">
+                  <div className="flex items-center mb-2">
+                    <div className="p-2 rounded-md bg-blue-100 dark:bg-blue-900/30 text-blue-500 dark:text-blue-400 mr-3 group-hover:bg-blue-500 group-hover:text-white transition-colors">
+                      {/* Icon placeholder if needed */}
                     </div>
-                    <div className="w-full bg-gray-200 dark:bg-gray-700 rounded-full h-2.5">
-                      <div
-                        className="bg-blue-500 h-2.5 rounded-full transition-all duration-1000 ease-out"
-                        style={{
-                          width: `${skill.level}%`,
-                          animationDelay: "300ms",
-                        }}
-                      ></div>
-                    </div>
+                    <span className="font-medium text-gray-800 dark:text-gray-200">
+                      {skill.name}
+                    </span>
                   </div>
-                );
-              })}
+
+                  <div className="w-full bg-gray-200 dark:bg-gray-700 rounded-full h-2.5">
+                    <div
+                      className="bg-blue-500 h-2.5 rounded-full transition-all duration-1000 ease-out"
+                      style={{ width: `${skill.level}%`, animationDelay: "300ms" }}
+                    ></div>
+                  </div>
+                </div>
+              ))}
             </div>
+
           </div>
         </div>
       </div>
