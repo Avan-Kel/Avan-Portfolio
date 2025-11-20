@@ -70,7 +70,7 @@ export const projects: Project[] = [
       "Python",
       "Fast API", 
     ],
-    link: "https://avan-portfolio-weather-app-promises-projects-3ed1ac1b.vercel.app/",
+    link: "https://auth-system-server-br7d.onrender.com",
     github: "https://github.com/Avan-Kel/Avan-PortfolioWeatherApp.git",
   },
  {
