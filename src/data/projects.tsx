@@ -35,8 +35,8 @@ export const projects: Project[] = [
       "Document Retrieval",
       "Conversational AI",
     ],
-    link: "",
-    github: "https://github.com/Avan-Kel/Avan-PortfolioWeatherApp.git",
+    link: "https://hng-be-grade-3-aiagent.onrender.com",
+    github: "https://github.com/Avan-Kel/HNG-BE-GRADE-3-AIAgent.git",
   },
   {
     id: "3",
