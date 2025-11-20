@@ -51,8 +51,8 @@ const Hero: React.FC<HeroProps> = ({ onExploreClick }) => {
           ref={subtitleRef}
           className="text-xl md:text-2xl text-gray-600 dark:text-gray-300 max-w-2xl mx-auto mb-10"
         >
-          Full-Stack Developer crafting scalable backends, polished
-          UIs, and seamless user experiences—end to end.
+          Full-Stack Engineer building scalable backend systems,
+          modern interfaces, and seamless experiences across the stack.
         </p>
 
         <button

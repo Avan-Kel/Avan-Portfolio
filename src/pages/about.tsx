@@ -17,7 +17,6 @@ const About: React.FC = () => {
         </div>
 
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
-          
           {/* Bio Section */}
           <div>
             <h3 className="text-2xl font-bold mb-6 text-gray-800 dark:text-white">
@@ -25,17 +24,17 @@ const About: React.FC = () => {
             </h3>
 
             <p className="text-gray-600 dark:text-gray-300 mb-6 leading-relaxed">
-              I’m a Full-Stack Developer who enjoys building efficient backend systems and polished,
-              intuitive front-end interfaces. Over the course of working with modern technologies like
-              Next.js, Express, Node.js, and relational databases, I’ve become comfortable creating
-              complete end-to-end solutions that are maintainable, scalable, and user-focused.
+              I’m a Full-Stack Engineer who builds both modern, interactive front-end interfaces and
+              reliable, scalable backend systems. Working with technologies like Next.js, FastAPI,
+              Node.js, and PostgreSQL, I’ve become comfortable delivering complete end-to-end
+              solutions that focus on performance, maintainability, and clean architectural design.
             </p>
 
             <p className="text-gray-600 dark:text-gray-300 mb-6 leading-relaxed">
-              My work often revolves around architecting APIs, optimizing data flow, managing
-              authentication systems, and bringing designs to life through responsive, accessible UI
-              components. Whether it’s designing a robust backend or crafting a smooth user
-              experience, I enjoy seeing a project through from concept to deployment.
+              My work spans API design, authentication systems, database modeling, server-side logic,
+              and transforming ideas into polished, responsive user experiences. Whether I’m building
+              out a backend service or refining a front-end interface, I enjoy owning the entire
+              development pipeline from concept to deployment.
             </p>
 
             {/* Experience */}
@@ -108,9 +107,7 @@ const About: React.FC = () => {
               {skills.map((skill) => (
                 <div key={skill.name} className="group">
                   <div className="flex items-center mb-2">
-                    <div className="p-2 rounded-md bg-blue-100 dark:bg-blue-900/30 text-blue-500 dark:text-blue-400 mr-3 group-hover:bg-blue-500 group-hover:text-white transition-colors">
-                      {/* Icon placeholder if needed */}
-                    </div>
+                    <div className="p-2 rounded-md bg-blue-100 dark:bg-blue-900/30 text-blue-500 dark:text-blue-400 mr-3 group-hover:bg-blue-500 group-hover:text-white transition-colors"></div>
                     <span className="font-medium text-gray-800 dark:text-gray-200">
                       {skill.name}
                     </span>
