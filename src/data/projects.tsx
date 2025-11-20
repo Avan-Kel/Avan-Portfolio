@@ -125,7 +125,7 @@ export const projects: Project[] = [
   {
     id: "8",
     title: "BE - Random Cat Facts API",
-    description: "",
+    description: "A lightweight but fully functional REST API built with Node.js and Express, designed to serve random cat facts on demand. This project demonstrates your ability to structure backend services, expose clean API endpoints, and deploy production-ready applications on Render.",
     image: "/cat.jpeg",
     tags: ["Node.js", "Express", "REST API", "Render"],
     link: "https://random-cat-facts-api.onrender.com",
@@ -134,7 +134,7 @@ export const projects: Project[] = [
   {
     id: "9",
     title: "FE - Ticket Manager",
-    description: "",
+    description: "A clean and interactive React application for managing support tickets, built with modern UI principles and deployed on Vercel. This project highlights your understanding of component-driven development, state management, and responsive styling with Tailwind CSS.",
     image: "/ticket.jpeg",
     tags: ["React", "Tailwind CSS", "Frontend", "Vercel"],
     link: "https://hng-fe-grade-2-react-git-main-promises-projects-3ed1ac1b.vercel.app",
