@@ -2,29 +2,28 @@
 import { Project } from "../types/page";
 
 export const projects: Project[] = [
-    {
-  id: "1",
-  title: "FE - Crypto Currency App",
-  description:
-    "A responsive cryptocurrency dashboard that fetches live market data using the CoinGecko API. Features include dynamic charts, real-time price tracking, coin search, and interactive UI components for visualizing market trends.",
-  image: "/crypto-background.jpg",
-  tags: [
-    "React",
-    "Next.js",
-    "Tailwind CSS",
-    "CoinGecko API",
-    "Recharts",
-    "Responsive Design",
-    "Crypto Dashboard"
-  ],
-  link: "https://avan-crypto.vercel.app",
-  github: "https://github.com/Avan-Kel/Avan-Crypto.git"
-},
+  {
+    id: "1",
+    title: "FE - Crypto Currency App",
+    description:
+      "A responsive cryptocurrency dashboard that fetches live market data using the CoinGecko API. Features include dynamic charts, real-time price tracking, coin search, and interactive UI components for visualizing market trends.",
+    image: "/crypto-background.jpg",
+    tags: [
+      "React",
+      "Next.js",
+      "Tailwind CSS",
+      "CoinGecko API",
+      "Recharts",
+      "Responsive Design",
+      "Crypto Dashboard",
+    ],
+    link: "https://avan-crypto.vercel.app",
+    github: "https://github.com/Avan-Kel/Avan-Crypto.git",
+  },
   {
     id: "2",
     title: "BE - Dev Encyclopedia AI Agent",
-    description:
-      "A Dev encyclopedia agent",
+    description: "COMING SOON...",
     image: "/devagent.webp",
     tags: [
       "Python",
@@ -35,12 +34,11 @@ export const projects: Project[] = [
       "AI Agents",
       "Document Retrieval",
       "Conversational AI",
-
     ],
     link: "",
     github: "https://github.com/Avan-Kel/Avan-PortfolioWeatherApp.git",
   },
-    {
+  {
     id: "3",
     title: "FE - Weather Forecast App",
     description:
@@ -48,9 +46,9 @@ export const projects: Project[] = [
     image: "/weather-background.jpg",
     tags: [
       "React",
-      "Next.js", 
+      "Next.js",
       "TypeScript",
-      "Tailwind CSS", 
+      "Tailwind CSS",
       "OpenWeather API",
       "Responsive Design",
       "Data Visualization",
@@ -60,7 +58,7 @@ export const projects: Project[] = [
     link: "https://avan-portfolio-weather-app-promises-projects-3ed1ac1b.vercel.app/",
     github: "https://github.com/Avan-Kel/Avan-PortfolioWeatherApp.git",
   },
-    {
+  {
     id: "4",
     title: "BE - Authentication & Authorization System API",
     description:
@@ -68,43 +66,44 @@ export const projects: Project[] = [
     image: "/a-arestapi.jpg",
     tags: [
       "Python",
-      "Fast API", 
+      "FastAPI",
+      "PostgreSQL",
+      "Alembic",
+      "Pydantic",
+      "Uvicorn",
+      "Render",
     ],
     link: "https://auth-system-server-br7d.onrender.com",
     github: "https://github.com/Avan-Kel/Auth-System-Server.git",
   },
- {
-  id: "5",
-  title: "FE - YouTube Clone Dashboard",
-  description:
-    "A responsive YouTube-style dashboard that mimics the UI and user experience of the original platform. Includes a custom navigation bar, embedded video sections, layout toggles, and subscription categorization.",
-  image: "/youtube-background.jpg",
-  tags: [
-    "React",
-    "Next.js",
-    "Tailwind CSS",
-    "Responsive Design",
-    "UI/UX Clone",
-    "Video Embeds",
-    "Component Design"
-  ],
-  link: "https://avan-yt-promises-projects-3ed1ac1b.vercel.app",
-  github: "https://github.com/Avan-Kel/Avan-YT.git"
-},
+  {
+    id: "5",
+    title: "FE - YouTube Clone Dashboard",
+    description:
+      "A responsive YouTube-style dashboard that mimics the UI and user experience of the original platform. Includes a custom navigation bar, embedded video sections, layout toggles, and subscription categorization.",
+    image: "/youtube-background.jpg",
+    tags: [
+      "React",
+      "Next.js",
+      "Tailwind CSS",
+      "Responsive Design",
+      "UI/UX Clone",
+      "Video Embeds",
+      "Component Design",
+    ],
+    link: "https://avan-yt-promises-projects-3ed1ac1b.vercel.app",
+    github: "https://github.com/Avan-Kel/Avan-YT.git",
+  },
   {
     id: "6",
     title: "BE - API Gateway / Routing Engine",
-    description:
-      "A backend that dynamically forwards requests to different microservices based on request params or headers.",
+    description: "COMING SOON...",
     image: "/api-gateway.png",
-    tags: [
-      "Python",
-      "Fast API"
-    ],
+    tags: ["Python", "Fast API"],
     link: "https://avan-portfolio-weather-app-promises-projects-3ed1ac1b.vercel.app/",
     github: "https://github.com/Avan-Kel/Avan-PortfolioWeatherApp.git",
   },
-    {
+  {
     id: "7",
     title: "FE - Task Management App",
     description:
@@ -126,26 +125,18 @@ export const projects: Project[] = [
   {
     id: "8",
     title: "BE - Random Cat Facts API",
-    description:
-      "",
+    description: "",
     image: "/cat.jpeg",
-    tags: [
-      "Express", 
-      "",
-    ],
+    tags: ["Node.js", "Express", "REST API", "Render"],
     link: "https://random-cat-facts-api.onrender.com",
     github: "https://github.com/Avan-Kel/HNG-BE-GRADE-0.git",
   },
-    {
+  {
     id: "9",
     title: "FE - Ticket Manager",
-    description:
-      "",
+    description: "",
     image: "/ticket.jpeg",
-    tags: [
-      "React", 
-      "Tailwind",
-    ],
+    tags: ["React", "Tailwind CSS", "Frontend", "Vercel"],
     link: "https://hng-fe-grade-2-react-git-main-promises-projects-3ed1ac1b.vercel.app",
     github: "https://github.com/Avan-Kel/HNG-FE-GRADE-2-REACT.git",
   },
