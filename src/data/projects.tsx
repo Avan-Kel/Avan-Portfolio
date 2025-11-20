@@ -23,7 +23,7 @@ export const projects: Project[] = [
   {
     id: "2",
     title: "BE - Dev Encyclopedia AI Agent",
-    description: "COMING SOON...",
+    description: "An AI workflow that returns developer technology information by giving detailed information about programming frameworks, libraries, and tools",
     image: "/devagent.webp",
     tags: [
       "Python",
