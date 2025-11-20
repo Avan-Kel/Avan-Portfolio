@@ -71,7 +71,7 @@ export const projects: Project[] = [
       "Fast API", 
     ],
     link: "https://auth-system-server-br7d.onrender.com",
-    github: "https://github.com/Avan-Kel/Avan-PortfolioWeatherApp.git",
+    github: "https://github.com/Avan-Kel/Auth-System-Server.git",
   },
  {
   id: "5",
