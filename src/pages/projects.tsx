@@ -3,20 +3,40 @@ import React from "react";
 import { projects } from "../data/projects";
 import { ExternalLink, Github } from "lucide-react";
 import Image from "next/image";
+import LetterGlitch from "@/components/LetterGlitch";
 
 const Projects: React.FC = () => {
   return (
-    <section id="projects" className="py-20 bg-gray-50 dark:bg-gray-800">
+    <section
+      id="projects"
+      className="relative py-20 bg-gray-50 dark:bg-gray-800 overflow-hidden"
+    >
+      {/* 🔥 Background Glitch Effect */}
+      <div className="absolute inset-0 h-full w-full">
+        <LetterGlitch
+          glitchColors={["#2b4539", "#61dca3", "#61b3dc"]}
+          glitchSpeed={50}
+          centerVignette={true}
+          outerVignette={false}
+          smooth={true}
+          characters="ABCDEFGHIJKLMNOPQRSTUVWXYZ!@#$&*()-_+=/[]{};:<>.,0123456789"
+        />
+      </div>
+
       <div className="container mx-auto px-4 md:px-6">
         <div className="text-center mb-16">
-          <h2 className="text-3xl md:text-4xl font-bold mb-4 bg-gradient-to-r from-blue-500 to-teal-400 bg-clip-text text-transparent">
-            My Projects
-          </h2>
-          <div className="w-24 h-1 bg-blue-500 mx-auto rounded-full mb-8"></div>
-          <p className="text-gray-600 dark:text-gray-300 max-w-2xl mx-auto">
-            Check out some of my recent work. Each project represents a unique
-            challenge and solution.
-          </p>
+          <div className="relative z-10 bg-white dark:bg-black p-4 rounded-lg inline-block">
+            <h2 className="text-3xl md:text-4xl font-bold mb-4">
+              <span className="bg-gradient-to-r from-blue-500 to-teal-400 bg-clip-text text-transparent">
+                My Projects
+              </span>
+            </h2>
+            <div className="w-24 h-1 bg-blue-500 mx-auto rounded-full mb-8"></div>
+            <p className="bg-gradient-to-r from-blue-500 to-teal-400 bg-clip-text text-transparent max-w-2xl mx-auto">
+              Check out some of my recent work. Each project represents a unique
+              challenge and solution.
+            </p>
+          </div>
         </div>
 
         {/* Projects grid */}
@@ -40,6 +60,7 @@ const Projects: React.FC = () => {
                 <h3 className="text-xl font-bold mb-2 text-gray-800 dark:text-white">
                   {project.title}
                 </h3>
+
                 <p className="text-gray-600 dark:text-gray-300 text-sm mb-4">
                   {project.description}
                 </p>

@@ -89,6 +89,19 @@ a {
 }
 
 
+@layer utilities {
+  .text-glow-light {
+    text-shadow:
+      0 0 4px rgba(59, 130, 246, 0.6),
+      0 0 12px rgba(20, 184, 166, 0.5);
+  }
+
+  @media (prefers-color-scheme: dark) {
+    .text-glow-light {
+      text-shadow: none;
+    }
+  }
+}
 
 @layer base {
   * {
