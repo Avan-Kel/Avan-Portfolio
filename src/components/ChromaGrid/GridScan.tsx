@@ -10,6 +10,16 @@ import * as THREE from "three";
 import * as faceapi from "face-api.js";
 import "./GridScan.css";
 
+
+interface VideoFrameCallbackMetadata {
+  presentationTime: number;
+  expectedDisplayTime?: number;
+  width?: number;
+  height?: number;
+  // add other fields if you ever need them
+}
+
+
 type GridScanProps = {
   enableWebcam?: boolean;
   showPreview?: boolean;
@@ -413,18 +423,27 @@ export const GridScan: React.FC<GridScanProps> = ({
     };
     const onClick = async () => {
       const nowSec = performance.now() / 1000;
+
       if (scanOnClick) pushScan(nowSec);
-      if (
-        enableGyro &&
-        typeof window !== "undefined" &&
-        (window as any).DeviceOrientationEvent &&
-        (DeviceOrientationEvent as any).requestPermission
-      ) {
-        try {
-          await (DeviceOrientationEvent as any).requestPermission();
-        } catch {}
+
+      if (enableGyro && typeof window !== "undefined") {
+        // Check if the DeviceOrientationEvent exists and has requestPermission
+        const DeviceOrientation = window.DeviceOrientationEvent as
+          | (typeof DeviceOrientationEvent & {
+              requestPermission?: () => Promise<PermissionState>;
+            })
+          | undefined;
+
+        if (DeviceOrientation?.requestPermission) {
+          try {
+            await DeviceOrientation.requestPermission();
+          } catch (err) {
+            console.error("Gyroscope permission denied or error:", err);
+          }
+        }
       }
     };
+
     const onEnter = () => {
       if (leaveTimer) {
         clearTimeout(leaveTimer);
@@ -652,6 +671,22 @@ export const GridScan: React.FC<GridScanProps> = ({
     lineJitter,
     scanDirection,
     enablePost,
+    bloomIntensity,
+    bloomSmoothing,
+    bloomThreshold,
+    chromaticAberration,
+    maxSpeed,
+    noiseIntensity,
+    scanDelay,
+    scanDuration,
+    scanGlow,
+    scanPhaseTaper,
+    scanSoftness,
+    skewScale,
+    smoothTime,
+    tiltScale,
+    yBoost,
+    yawScale,
   ]);
 
   useEffect(() => {
@@ -678,8 +713,8 @@ export const GridScan: React.FC<GridScanProps> = ({
     }
     if (bloomRef.current) {
       bloomRef.current.blendMode.opacity.value = Math.max(0, bloomIntensity);
-      (bloomRef.current as any).luminanceMaterial.threshold = bloomThreshold;
-      (bloomRef.current as any).luminanceMaterial.smoothing = bloomSmoothing;
+      bloomRef.current.luminanceMaterial.threshold = bloomThreshold;
+      bloomRef.current.luminanceMaterial.smoothing = bloomSmoothing;
     }
     if (chromaRef.current) {
       chromaRef.current.offset.set(chromaticAberration, chromaticAberration);
@@ -744,6 +779,7 @@ export const GridScan: React.FC<GridScanProps> = ({
   useEffect(() => {
     let stop = false;
     let lastDetect = 0;
+    const video = videoRef.current;
 
     const start = async () => {
       if (!enableWebcam || !modelsReady) return;
@@ -838,10 +874,17 @@ export const GridScan: React.FC<GridScanProps> = ({
           }
         }
 
-        if ("requestVideoFrameCallback" in HTMLVideoElement.prototype) {
-          (video as any).requestVideoFrameCallback(() =>
-            detect(performance.now())
-          );
+        const videoEl = video as HTMLVideoElement & {
+          requestVideoFrameCallback?: (
+            callback: (
+              now: number,
+              metadata: VideoFrameCallbackMetadata
+            ) => void
+          ) => void;
+        };
+
+        if (videoEl.requestVideoFrameCallback) {
+          videoEl.requestVideoFrameCallback(() => detect(performance.now()));
         } else {
           requestAnimationFrame(detect);
         }
@@ -854,7 +897,6 @@ export const GridScan: React.FC<GridScanProps> = ({
 
     return () => {
       stop = true;
-      const video = videoRef.current;
       if (video) {
         const stream = video.srcObject as MediaStream | null;
         if (stream) stream.getTracks().forEach((t) => t.stop());
@@ -913,7 +955,7 @@ function smoothDampVec2(
   const x = omega * deltaTime;
   const exp = 1 / (1 + x + 0.48 * x * x + 0.235 * x * x * x);
 
-  let change = current.clone().sub(target);
+  const change = current.clone().sub(target);
   const originalTo = target.clone();
 
   const maxChange = maxSpeed * smoothTime;
