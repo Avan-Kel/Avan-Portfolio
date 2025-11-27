@@ -96,6 +96,20 @@ const Hero: React.FC<HeroProps> = ({ onExploreClick }) => {
         <p
           ref={subtitleRef}
           className="
+    text-xl md:text-2xl font-black max-w-2xl mx-auto 
+    bg-gradient-to-r from-blue-700 to-purple-700 
+    bg-clip-text text-transparent 
+    dark:bg-gradient-to-r dark:from-yellow-700 dark:to-purple-700 
+    dark:bg-clip-text dark:text-transparent
+  "
+        >
+          Hero Overview
+        </p>
+        <div className="w-[200px] h-1 mb-4 bg-blue-500 mx-auto rounded-full"></div>
+
+        <p
+          ref={subtitleRef}
+          className="
     text-xl md:text-2xl font-black max-w-2xl mx-auto mb-10
     bg-gradient-to-r from-blue-700 to-purple-700 
     bg-clip-text text-transparent 
@@ -117,7 +131,7 @@ const Hero: React.FC<HeroProps> = ({ onExploreClick }) => {
         </button>
 
         {/* Floating 3D Torus (Bottom-right) */}
-        <div className="fixed bottom-1 right-8 w-20 h-40 z-50 pointer-events-none">
+        <div className="fixed bottom-1 right-8 w-20 h-40 z-80 pointer-events-none">
           <TorusCanvas
             color={themeColors.color}
             emissive={themeColors.emissive}

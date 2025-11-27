@@ -1,13 +1,15 @@
 "use client";
 import React from "react";
-import { skills } from "../data/skills";
-import { experiences } from "../data/experience";
-import { education } from "../data/education";
+import { skills } from "@/data/skills";
+import { experiences } from "@/data/experience";
+import { education } from "@/data/education";
 import { ChevronRight } from "lucide-react";
+import Navbar from "@/components/navbar";
 
 const About: React.FC = () => {
   return (
     <section id="about" className="py-20 bg-white dark:bg-gray-900">
+      <Navbar />
       <div className="container mx-auto px-4 md:px-6">
         <div className="text-center mb-16">
           <h2 className="text-3xl md:text-4xl font-bold mb-4 bg-gradient-to-r from-blue-500 to-teal-400 bg-clip-text text-transparent">
@@ -24,17 +26,20 @@ const About: React.FC = () => {
             </h3>
 
             <p className="text-gray-600 dark:text-gray-300 mb-6 leading-relaxed">
-              I’m a Full-Stack Engineer who builds both modern, interactive front-end interfaces and
-              reliable, scalable backend systems. Working with technologies like Next.js, FastAPI,
-              Node.js, and PostgreSQL, I’ve become comfortable delivering complete end-to-end
-              solutions that focus on performance, maintainability, and clean architectural design.
+              I’m a Full-Stack Engineer who builds both modern, interactive
+              front-end interfaces and reliable, scalable backend systems.
+              Working with technologies like Next.js, FastAPI, Node.js, and
+              PostgreSQL, I’ve become comfortable delivering complete end-to-end
+              solutions that focus on performance, maintainability, and clean
+              architectural design.
             </p>
 
             <p className="text-gray-600 dark:text-gray-300 mb-6 leading-relaxed">
-              My work spans API design, authentication systems, database modeling, server-side logic,
-              and transforming ideas into polished, responsive user experiences. Whether I’m building
-              out a backend service or refining a front-end interface, I enjoy owning the entire
-              development pipeline from concept to deployment.
+              My work spans API design, authentication systems, database
+              modeling, server-side logic, and transforming ideas into polished,
+              responsive user experiences. Whether I’m building out a backend
+              service or refining a front-end interface, I enjoy owning the
+              entire development pipeline from concept to deployment.
             </p>
 
             {/* Experience */}
@@ -45,7 +50,10 @@ const About: React.FC = () => {
 
               <div className="space-y-4">
                 {experiences.map((exp, index) => (
-                  <div key={index} className="transition-transform hover:translate-x-1">
+                  <div
+                    key={index}
+                    className="transition-transform hover:translate-x-1"
+                  >
                     <div className="flex items-start">
                       <ChevronRight
                         className="text-blue-500 mt-1 flex-shrink-0"
@@ -76,7 +84,10 @@ const About: React.FC = () => {
 
               <div className="space-y-4">
                 {education.map((edu, index) => (
-                  <div key={index} className="transition-transform hover:translate-x-1">
+                  <div
+                    key={index}
+                    className="transition-transform hover:translate-x-1"
+                  >
                     <div className="flex items-start">
                       <ChevronRight
                         className="text-blue-500 mt-1 flex-shrink-0"
@@ -116,13 +127,15 @@ const About: React.FC = () => {
                   <div className="w-full bg-gray-200 dark:bg-gray-700 rounded-full h-2.5">
                     <div
                       className="bg-blue-500 h-2.5 rounded-full transition-all duration-1000 ease-out"
-                      style={{ width: `${skill.level}%`, animationDelay: "300ms" }}
+                      style={{
+                        width: `${skill.level}%`,
+                        animationDelay: "300ms",
+                      }}
                     ></div>
                   </div>
                 </div>
               ))}
             </div>
-
           </div>
         </div>
       </div>

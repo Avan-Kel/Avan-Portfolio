@@ -21,5 +21,5 @@ export const skills: Skill[] = [
   { name: "Node.js", icon: "layers", level: 100 },
   { name: "Git", icon: "database", level: 100 },
   { name: "Bootstrap", icon: "webhook", level: 85 },
-  { name: "Shadcn UI", icon: "container", level: 100 },
+  { name: "Docker", icon: "container", level: 100 },
 ];
