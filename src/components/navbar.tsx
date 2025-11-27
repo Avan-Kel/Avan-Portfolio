@@ -15,7 +15,7 @@ const Navbar: React.FC = () => {
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
-  const closeMenu = () => setIsMenuOpen(false);
+  
 
   return (
     <nav

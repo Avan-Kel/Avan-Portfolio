@@ -2,7 +2,6 @@
 import React from "react";
 import { skills } from "../data/skills";
 import { experiences } from "../data/experience";
-import { education } from "../data/education";
 import { ChevronRight } from "lucide-react";
 
 export default function AboutOverview() {

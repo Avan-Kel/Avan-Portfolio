@@ -51,7 +51,7 @@ const Blog: React.FC = () => {
           <div className="w-24 h-1 bg-blue-500 mx-auto rounded-full mb-8"></div>
 
           <p className="text-gray-600 dark:text-gray-300 max-w-2xl mx-auto">
-            Articles, tutorials, insights, and everything I'm working on. Dive
+            Articles, tutorials, insights, and everything I&#39;m working on. Dive
             in and explore my thoughts, builds, and breakdowns.
           </p>
         </div>
@@ -64,11 +64,11 @@ const Blog: React.FC = () => {
               href={`/routes/blog/${post.slug}`}
               className="bg-gray-50 dark:bg-gray-800 rounded-xl overflow-hidden shadow-md hover:shadow-xl transition-all duration-300 group"
             >
-              <img
+              {/* <img
                 src={post.image}
                 alt={post.title}
                 className="w-full h-48 object-cover group-hover:scale-105 transition-transform duration-300"
-              />
+              /> */}
 
               <div className="p-6">
                 <div className="flex items-center justify-between mb-3 text-sm text-gray-500 dark:text-gray-400">
