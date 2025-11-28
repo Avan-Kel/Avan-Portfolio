@@ -1,36 +1,67 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+## Personal Developer Portfolio (Next.js + Tailwind)
+A modern, fast, and fully responsive developer portfolio built with Next.js 14 (App Router), TypeScript, and Tailwind CSS.
+The website features routed pages for Projects, About, Blog Posts, Timeline, and Contact, with a preview-style Home page that highlights all sections.
 
-## Getting Started
+# Demo
+https://avan-portfolio.vercel.app/
 
-First, run the development server:
+# Features
+- Homepage Overview
+- A clean landing page that gives visitors quick access to:
+- About Preview
+- Project Highlights
+- Blog Preview
+- Contact CTA
+- Navigate via Navbar to full routed pages
 
-```bash
+# Routed Pages
+The portfolio includes full pages for:
+## About – 
+who you are, what you do, your mission
+
+## Projects – 
+professional + personal work with images, links, and descriptions
+
+## Blog – 
+structured blog list with individual posts
+
+## Timeline – 
+life experience & career progression using a vertical timeline
+
+## Contact – 
+direct email section or social links
+
+# UI & Styling
+- Fully responsive (mobile-first)
+- Styled with Tailwind CSS
+- Dark mode supported
+- Clean component system (Navbar, Footer, Cards, etc.)
+
+# Tech Stack
+- Next.js 14 (App Router)
+- React / TypeScript
+- Tailwind CSS
+- next/image for optimized images
+- Custom Hooks (useScrollTo, etc.)
+- Modular folder structure inside app/ and components/
+
+# Clone the repo
+git clone https://github.com/Avan-Kel/Avan-Portfolio.git
+cd your-portfolio
+
+# Install dependencies
+npm install
+# or
+yarn install
+
+3. Run the development server
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+# Your site runs at:
+http://localhost:3000
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
 
-## Learn More
-
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+# Author
+***Eguh Promise***
+***Full Stack Developer***
