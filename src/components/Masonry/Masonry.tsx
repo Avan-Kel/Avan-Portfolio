@@ -1,21 +1,36 @@
+"use client";
+
 import React, { useEffect, useLayoutEffect, useMemo, useRef, useState } from 'react';
 import { gsap } from 'gsap';
 
 import './Masonry.css';
 
 const useMedia = (queries: string[], values: number[], defaultValue: number): number => {
-  const get = () => values[queries.findIndex(q => matchMedia(q).matches)] ?? defaultValue;
+  const get = () => {
+    if (typeof window === "undefined") return defaultValue;
+    const index = queries.findIndex(q => window.matchMedia(q).matches);
+    return values[index] ?? defaultValue;
+  };
 
-  const [value, setValue] = useState<number>(get);
+  const [value, setValue] = useState<number>(defaultValue);
 
   useEffect(() => {
-    const handler = () => setValue(get);
-    queries.forEach(q => matchMedia(q).addEventListener('change', handler));
-    return () => queries.forEach(q => matchMedia(q).removeEventListener('change', handler));
-  }, [queries]);
+    if (typeof window === "undefined") return;
+
+    const handler = () => setValue(get());
+
+    const mql = queries.map(q => window.matchMedia(q));
+    mql.forEach(m => m.addEventListener("change", handler));
+
+    // Initial compute NOW that window exists
+    setValue(get());
+
+    return () => mql.forEach(m => m.removeEventListener("change", handler));
+  }, [queries, values]);
 
   return value;
 };
+
 
 const useMeasure = <T extends HTMLElement>() => {
   const ref = useRef<T | null>(null);
@@ -189,7 +204,7 @@ const Masonry: React.FC<MasonryProps> = ({
     });
 
     hasMounted.current = true;
-  }, [grid, imagesReady, stagger, animateFrom, blurToFocus, duration, ease]);
+  }, [grid, imagesReady, stagger, animateFrom, blurToFocus, duration, ease, getInitialPosition]);
 
   const handleMouseEnter = (e: React.MouseEvent, item: GridItem) => {
     const element = e.currentTarget as HTMLElement;
