@@ -93,19 +93,7 @@ const Hero: React.FC<HeroProps> = ({ onExploreClick }) => {
           Eguh Promise
         </h1>
 
-        <p
-          ref={subtitleRef}
-          className="
-    text-xl md:text-2xl font-black max-w-2xl mx-auto 
-    bg-gradient-to-r from-blue-700 to-purple-700 
-    bg-clip-text text-transparent 
-    dark:bg-gradient-to-r dark:from-yellow-700 dark:to-purple-700 
-    dark:bg-clip-text dark:text-transparent
-  "
-        >
-          Hero Overview
-        </p>
-        <div className="w-[200px] h-1 mb-4 bg-blue-500 mx-auto rounded-full"></div>
+      
 
         <p
           ref={subtitleRef}

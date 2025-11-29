@@ -48,7 +48,7 @@ const items = [
 const Timeline = () => {
   const events = [
     {
-      year: "2003",
+      year: "2002",
       title: "Born in Lagos, Nigeria",
       location: "Lagos",
       description:

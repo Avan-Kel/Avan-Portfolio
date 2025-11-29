@@ -4,6 +4,8 @@ import About from "@/overview/about";
 import Hero from "@/overview/hero";
 import Contact from "@/overview/contact";
 import Projects from "@/overview/projects";
+import BlogPreview from "@/overview/blog";
+import TimelinePage from "@/overview/timeline";
 import { useScrollTo } from "@/hooks/usescrollto";
 import Footer from "@/components/footer";
 
@@ -28,6 +30,10 @@ export default function Home() {
           <About />
           
           <Projects />
+
+          <BlogPreview />
+
+          <TimelinePage />
           
           <Contact />
         </main>
