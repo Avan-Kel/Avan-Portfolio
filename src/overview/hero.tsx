@@ -93,8 +93,6 @@ const Hero: React.FC<HeroProps> = ({ onExploreClick }) => {
           Eguh Promise
         </h1>
 
-      
-
         <p
           ref={subtitleRef}
           className="
@@ -119,7 +117,7 @@ const Hero: React.FC<HeroProps> = ({ onExploreClick }) => {
         </button>
 
         {/* Floating 3D Torus (Bottom-right) */}
-        <div className="fixed bottom-1 right-8 w-20 h-40 z-80 pointer-events-none">
+        <div className="fixed bottom-4 right-4 w-16 h-16 md:w-20 md:h-20 z-[100]">
           <TorusCanvas
             color={themeColors.color}
             emissive={themeColors.emissive}

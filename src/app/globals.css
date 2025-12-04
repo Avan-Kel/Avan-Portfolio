@@ -8,6 +8,26 @@ body {
   overflow-x: hidden;
 }
 
+:root {
+  --glow-rgb: 132, 0, 255;
+  --accent: rgba(var(--glow-rgb), 0.95);
+  --accent-soft: rgba(var(--glow-rgb), 0.12);
+  --bg: #060010;
+}
+
+/* example card glow */
+.bg-neon {
+  box-shadow: 0 6px 30px rgba(var(--glow-rgb), 0.12), 0 0 10px rgba(var(--glow-rgb), 0.06);
+  border: 1px solid rgba(var(--glow-rgb), 0.14);
+}
+.recharts-tooltip-wrapper {
+  backdrop-filter: blur(6px) saturate(140%);
+  border-radius: 8px;
+  border: 1px solid rgba(var(--glow-rgb), 0.12);
+}
+
+
+
 body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
